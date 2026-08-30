@@ -51,7 +51,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{8pt}{8pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -117,11 +117,11 @@ problems with strong software design skills.
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Launched a \textbf{full-stack prepaid payments platform} (Cards, UPI, Net Banking) enabling real-time charge deduction at shipment creation and saving \textbf{\textasciitilde\$10M annually} by eliminating credit risk on small.
+        \item Launched  \textbf{prepaid payments platform} (Cards, UPI, Net Banking) enabling real-time charge deduction at shipment creation and saving \textbf{$\sim$\$10M p.a.} eliminating credit risk on non premium shippers.
         \item Designed and shipped an end-to-end fullstack \textbf{Wallet Refunds flow} with sync/async orchestration via \textbf{Amazon SWF}, ensuring idempotency and eliminating race conditions across distributed services.
         \item Cut \textbf{AWS Lambda invocations by 67\%} (600K to 200K) and reduced end-to-end system latency by \textbf{65\%} by eliminating redundant event processing in the package-transportation pipeline.
         \item Remediated a \textbf{critical production security vulnerability} that exposed internal cloud-storage parameters in file-download URLs, preventing unauthorized access to sensitive financial documents.
-        \item Owned features end-to-end across \textbf{6+ microservices}: design, implementation, code review, and integration testing in a fast-paced Agile team.
+        \item Owned features end-to-end across \textbf{6+ microservices} in a distributed systems architecture — design, implementation, code review, unit/integration testing with Junit and Jest, and CI/CD deployment in a fast-paced Agile team.
     \end{itemize}
     \end{minipage}
 }
@@ -156,7 +156,7 @@ problems with strong software design skills.
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Languages \& Frameworks} & Java, JavaScript, TypeScript, Python, C++, React.js, Redux, Node.js \\
-\textbf{Backend \& Data} & OOP, Design Patterns, System Design, ElasticSearch, PostgreSQL\\
+\textbf{Backend \& Data} & OOP, Design Patterns, Data Structures \& Algorithms, System Design, ElasticSearch, PostgreSQL\\
 \textbf{Cloud \& DevOps} & AWS (S3, RDS, CloudWatch, DynamoDB, SQS), Docker, Kubernetes \\
 \textbf{Gen AI} & LLMs, Prompt Engineering, AI Agents, RAG, AI-assisted development \\
 \end{tabularx}
@@ -173,4 +173,6 @@ problems with strong software design skills.
     \end{minipage}
 }
 \end{tabularx}
+
+
 \end{document}
