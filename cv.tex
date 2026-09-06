@@ -116,11 +116,11 @@ Software Engineer with 3+ years of experience building scalable payment, fintech
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Launched a \textbf{prepaid payments platform} supporting Cards, UPI, and Net Banking, enabling real-time charge collection during shipment creation and reducing \textbf{$\sim$\$10M in annual credit exposure} from non-premium shippers.
-        \item Designed and delivered an end-to-end \textbf{Wallet Refunds flow} using synchronous and asynchronous orchestration via \textbf{Amazon SWF}, ensuring idempotent processing and eliminating race conditions across distributed services.
-        \item Reduced \textbf{AWS Lambda invocations by 67\%} (600K to 200K) and end-to-end system latency by \textbf{65\%} by eliminating redundant event processing in the package-transportation pipeline.
-        \item Identified and remediated a \textbf{production authorization vulnerability} that exposed internal cloud-storage parameters in file-download URLs, preventing unauthorized access to sensitive financial documents.
-        \item Owned end-to-end delivery across \textbf{6+ microservices}, including architecture, implementation, code review, unit and integration testing with JUnit and Jest, and CI/CD deployment.
+        \item Built and launched the \textbf{first prepaid payments platform for India marketplace shippers} using \textbf{JSP, React/Redux, Java REST APIs, Velocity, and Elasticsearch}; integrated 3 payment modes to support a \textbf{$\sim$600-bps bad-debt reduction target} and a projected \textbf{50\% reduction in manual follow-ups} (10 to 5 hrs/week).
+        \item Architected the \textbf{first self-service prepaid refund experience} with \textbf{JSP/React, Redux, Java APIs, and UUID idempotency}, reducing blocking mid-flow server round-trips from \textbf{1 to 0} and manual operator touchpoints to \textbf{0} while preventing duplicate disbursements.
+        \item Optimized an event-driven shipment pipeline on \textbf{AWS Lambda} by removing redundant rule evaluations and restricting processing to high-signal events, reducing invocations by \textbf{67\%} (600K to 200K) and end-to-end latency by \textbf{65\%}.
+        \item Redesigned receipt and refund downloads on \textbf{Amazon S3} using server-side key resolution and short-TTL pre-signed URLs, closing a critical authorization vulnerability and reducing client-exposed cloud-storage parameters to \textbf{0}.
+        \item Led an India billing-address cutover using \textbf{LDAP-backed feature gates, Velocity templates, and CI/CD controls}, achieving \textbf{0 incorrect invoices} during and after production migration and establishing a reusable regional-release pattern.
     \end{itemize}
     \end{minipage}
 }
@@ -131,8 +131,8 @@ Software Engineer with 3+ years of experience building scalable payment, fintech
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Developed \textbf{RESTful backend APIs} for a Corporate Identity Platform supporting KYC verification, document generation, and electronic signatures, \textbf{reducing manual processing by 30\%}.
-        \item Led a team of 4 in building an \textbf{AI-assisted video KYC solution} with liveness detection, improving verification accuracy from \textbf{80\% to 93\%} across desktop and mobile applications.
+        \item Built a full-stack \textbf{Corporate Identity Platform} using \textbf{React, Python REST APIs, and PostgreSQL} for KYC verification, document generation, and electronic signatures, reducing manual processing by \textbf{30\%}.
+        \item Led a team of 4 in developing an \textbf{AI-assisted video KYC platform} using \textbf{Python, OpenCV, and lightweight open-source Google computer-vision models} for facial-data processing and liveness detection, improving verification accuracy from \textbf{80\% to 93\%} across React interfaces on desktop and mobile.
     \end{itemize}
     \end{minipage}
 }
@@ -154,7 +154,7 @@ Software Engineer with 3+ years of experience building scalable payment, fintech
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages \& Frameworks} & Java, JavaScript, TypeScript, Python, C++, React.js, Redux, Node.js \\
+\textbf{Languages \& Frameworks} & Java, JavaScript, TypeScript, Python, C++, React.js, Redux, Node.js, OpenCV \\
 \textbf{Backend \& Data} & REST APIs, Microservices, System Design, PostgreSQL, Elasticsearch, Redis, Kafka \\
 \textbf{Cloud \& DevOps} & AWS (Lambda, S3, RDS, CloudWatch, DynamoDB, SQS), Docker, Kubernetes, CI/CD \\
 \textbf{Engineering} & Distributed Systems, Event-Driven Architecture, OOP, Design Patterns, Data Structures \& Algorithms \\
