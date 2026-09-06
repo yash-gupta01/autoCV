@@ -1,178 +1,135 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 %----------------------------------------------------------------------------------------
-%	FONT
+% ATS-FRIENDLY TEXT ENCODING
 %----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES
+% PACKAGES AND FORMATTING
 %----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
-
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
+\usepackage{parskip}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[scale=0.9]{geometry}
-
-%tabularx environment
 \usepackage{tabularx}
-
-%for lists within experience section
 \usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[unicode,draft=false]{hyperref}
 
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{8pt}
+\titlespacing{\section}{0pt}{7pt}{6pt}
 
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
+\hypersetup{
+    colorlinks,
+    breaklinks,
+    urlcolor=linkcolour,
+    linkcolor=linkcolour,
+    pdftitle={Yash Gupta Resume},
+    pdfauthor={Yash Gupta}
+}
 
-%for social icons
-\usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
-
-% non-numbered pages
-\pagestyle{empty} 
+\pagestyle{empty}
 
 %----------------------------------------------------------------------------------------
-%	TITLE
+% HEADER
 %----------------------------------------------------------------------------------------
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Yash Gupta} \\[7.5pt]
-\href{https://www.linkedin.com/in/yashgupta-dev/}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} \ $|$ \ 
-\href{https://github.com/yashgupta-dev/}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \ 
-\href{mailto:yashgupta.dev01@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ yashgupta.dev01@gmail.com} \ $|$ \ 
-\href{tel:+919871176293}{\raisebox{-0.05\height}\faMobile \ +91 9871176293} \ $|$ \
-\href{https://www.google.com/maps/place/Hyderabad/}{\raisebox{-0.05\height}\faMapMarker \ Hyderabad, IN} \\
+\Huge{Yash Gupta} \\[5pt]
+\href{mailto:yashgupta.dev01@gmail.com}{yashgupta.dev01@gmail.com} $|$
+\href{tel:+919871176293}{+91 98711 76293} $|$ Hyderabad, India \\[2pt]
+\href{https://www.linkedin.com/in/yashgupta-dev/}{linkedin.com/in/yashgupta-dev} $|$
+\href{https://github.com/yashgupta-dev/}{github.com/yashgupta-dev} \\
 \end{tabularx}
 
-
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+% SUMMARY
 %----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
 \section{Summary}
-Software  Engineer with 3+ years building full-stack, distributed systems across payments, fintech, and ML platforms, solving challenging business
-problems with strong software design skills.
+Software Engineer with 3+ years of experience building scalable payment, fintech, and identity platforms using Java, JavaScript, TypeScript, React, and AWS. Delivered distributed systems processing high-value financial transactions, reduced serverless compute usage by 67\%, and improved end-to-end latency by 65\%. Experienced in microservices, event-driven architecture, system design, and production ownership.
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
+% EXPERIENCE
 %----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2019 - 2023 & B.Tech \textbf{Maths and Computing} \hfill (CPI: 8.08) \\
-& \textbf{Indian Institute of Technology (IIT) Goa} \\
-\end{tabularx}
-
-%Experience
 \section{Work Experience}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Amazon, Hyderabad - Software Development Engineer I} & \hfill Mar 2025 -- Present \\[3.75pt]
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Amazon, Hyderabad -- Software Development Engineer I} & Mar 2025 -- Present \\[2.5pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Launched  \textbf{prepaid payments platform} (Cards, UPI, Net Banking) enabling real-time charge deduction at shipment creation and saving \textbf{$\sim$\$10M p.a.} eliminating credit risk on non premium shippers.
-        \item Designed and shipped an end-to-end fullstack \textbf{Wallet Refunds flow} with sync/async orchestration via \textbf{Amazon SWF}, ensuring idempotency and eliminating race conditions across distributed services.
-        \item Cut \textbf{AWS Lambda invocations by 67\%} (600K to 200K) and reduced end-to-end system latency by \textbf{65\%} by eliminating redundant event processing in the package-transportation pipeline.
-        \item Remediated a \textbf{critical production security vulnerability} that exposed internal cloud-storage parameters in file-download URLs, preventing unauthorized access to sensitive financial documents.
-        \item Owned features end-to-end across \textbf{6+ microservices} in a distributed systems architecture — design, implementation, code review, unit/integration testing with Junit and Jest, and CI/CD deployment in a fast-paced Agile team.
+    \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=2pt]
+        \item Launched a \textbf{prepaid payments platform} supporting cards, UPI, and net banking, enabling real-time charge collection during shipment creation and avoiding approximately \textbf{\$10M in annual credit exposure} from non-premium shippers.
+        \item Designed and delivered a fault-tolerant \textbf{wallet refund workflow} using synchronous and asynchronous orchestration, ensuring idempotent processing and eliminating race conditions across distributed services.
+        \item Reduced \textbf{AWS Lambda invocations by 67\%} (approximately 600K to 200K) and improved end-to-end latency by \textbf{65\%} by eliminating redundant event processing from a package-transportation pipeline.
+        \item Identified and remediated a production authorization vulnerability that exposed internal cloud-storage parameters in file-download URLs, preventing unauthorized access to sensitive financial documents.
+        \item Owned end-to-end delivery of features spanning \textbf{6+ microservices}, including architecture, implementation, code review, unit and integration testing with JUnit and Jest, and CI/CD deployment.
     \end{itemize}
-    \end{minipage}
-}
+\end{minipage}}
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{iBind Systems, Bangalore - Software Development Engineer} & \hfill Jul 2023 -- Oct 2024 \\[3.75pt]
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{iBind Systems, Bengaluru -- Software Development Engineer} & Jul 2023 -- Oct 2024 \\[2.5pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Developed \textbf{RESTful backend APIs} for a Corporate Identity Platform (CIP) for KYC cross-verification, document generation, and e-signing, \textbf{reducing manual intervention by 30\%}.
-        \item Led a team of 4 to build an \textbf{AI-powered video KYC solution} with liveness detection, improving accuracy from \textbf{80\% to 93\%} across desktop and mobile.
+    \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=2pt]
+        \item Developed \textbf{RESTful backend APIs} for a corporate identity platform supporting KYC verification, document generation, and electronic signatures, reducing manual processing by \textbf{30\%}.
+        \item Led a \textbf{four-engineer team} in building an AI-assisted video KYC solution with liveness detection, increasing verification accuracy from \textbf{80\% to 93\%} across desktop and mobile applications.
     \end{itemize}
-    \end{minipage}
-}
+\end{minipage}}
 \end{tabularx}
 
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{ AI and Robotics Venture, Bangkok - Software Development Engineer} & \hfill Jun 2022 -- Nov 2022 \\[3.75pt]
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{AI and Robotics Venture, Bangkok -- Software Development Engineer} & Jun 2022 -- Nov 2022 \\[2.5pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Optimized \textbf{Redis cache} using Change Data Capture (CDC) with Debezium and Kafka, reducing DB query load by \textbf{40\%}, latency by \textbf{30\%}, and cache-miss rates by \textbf{53\%}.
+    \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=2pt]
+        \item Improved Redis performance for change-data-capture workloads built with Debezium and Kafka, reducing database query volume by \textbf{40\%}, latency by \textbf{30\%}, and cache-miss rates by \textbf{53\%}.
     \end{itemize}
-    \end{minipage}
-}
+\end{minipage}}
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-%	SKILLS
+% SKILLS
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages \& Frameworks} & Java, JavaScript, TypeScript, Python, C++, React.js, Redux, Node.js \\
-\textbf{Backend \& Data} & OOP, Design Patterns, Data Structures \& Algorithms, System Design, ElasticSearch, PostgreSQL\\
-\textbf{Cloud \& DevOps} & AWS (S3, RDS, CloudWatch, DynamoDB, SQS), Docker, Kubernetes \\
-\textbf{Gen AI} & LLMs, Prompt Engineering, AI Agents, RAG, AI-assisted development \\
+\textbf{Languages} & Java, JavaScript, TypeScript, Python, C++ \\
+\textbf{Frontend} & React, Redux, HTML, CSS \\
+\textbf{Backend} & Node.js, REST APIs, Microservices, Event-Driven Architecture \\
+\textbf{Data} & PostgreSQL, Elasticsearch, DynamoDB, Redis, Kafka \\
+\textbf{Cloud \& DevOps} & AWS Lambda, S3, RDS, CloudWatch, SQS, Docker, Kubernetes, CI/CD \\
+\textbf{Engineering} & Distributed Systems, System Design, Data Structures and Algorithms, Object-Oriented Design, Design Patterns \\
+\textbf{Testing} & JUnit, Jest, Unit Testing, Integration Testing \\
 \end{tabularx}
 
-%Projects
-\section{Projects}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{3D Cell Segmentation: B.Tech Thesis} & \hfill Jan 2023 -- May 2023 \\[3.75pt]
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Indian Institute of Technology (IIT) Goa} & 2019 -- 2023 \\
+Bachelor of Technology in Mathematics and Computing & CPI: 8.08/10 \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% PROJECT
+%----------------------------------------------------------------------------------------
+\section{Selected Project}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{3D Cell Segmentation -- Bachelor’s Thesis} & Jan 2023 -- May 2023 \\[2.5pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Designed a custom 3D CNN with attention mechanisms for cancer cell segmentation; improved IoU by \textbf{3.7\%}, Precision by \textbf{5.1\%}, and cut model size by \textbf{89\%} vs.\ CA-UNet using Python, TensorFlow, and CUDA on HPC clusters.
+    \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=2pt]
+        \item Developed a custom 3D convolutional neural network with attention mechanisms for cancer-cell segmentation, improving intersection over union by \textbf{3.7\%}, precision by \textbf{5.1\%}, and reducing model size by \textbf{89\%} compared with CA-UNet.
+        \item Implemented the training and evaluation pipeline using Python, TensorFlow, CUDA, and HPC infrastructure.
     \end{itemize}
-    \end{minipage}
-}
+\end{minipage}}
 \end{tabularx}
-
 
 \end{document}
