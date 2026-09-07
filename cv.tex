@@ -29,8 +29,6 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
-% Removed fontawesome5 since it is not available in standard minimal texlive in this env
-
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -43,18 +41,18 @@
 %----------------------------------------------------------------------------------------
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{Yash Gupta} \\[7.5pt]
-\href{https://www.linkedin.com/in/yashgupta-dev/}{LinkedIn} \ $|$ \ 
-\href{https://github.com/yashgupta-dev/}{GitHub} \ $|$ \ 
+\href{https://www.linkedin.com/in/yashgupta-dev/}{linkedin.com/in/yashgupta-dev} \ $|$ \ 
+\href{https://github.com/yashgupta-dev/}{github.com/yashgupta-dev} \ $|$ \ 
 \href{mailto:yashgupta.dev01@gmail.com}{yashgupta.dev01@gmail.com} \ $|$ \ 
 \href{tel:+919871176293}{+91 9871176293} \ $|$ \
-\href{https://www.google.com/maps/place/Hyderabad/}{Hyderabad, IN} \\
+Hyderabad, IN \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 % SUMMARY
 %----------------------------------------------------------------------------------------
 \section{Summary}
-Backend \& Distributed Systems Engineer with 3+ years of experience architecting fault-tolerant microservices, high-throughput event pipelines, and scalable payment infrastructure using Java, Python, AWS, Kafka, and Redis.
+Software Engineer (3+ years) building backend systems at production scale --- shipped a payments platform that moved \textbf{\$10M/year} off the risk book and cut pipeline latency \textbf{65\%}. Owns problems end-to-end, from design doc through production hardening.
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -62,15 +60,15 @@ Backend \& Distributed Systems Engineer with 3+ years of experience architecting
 \section{Work Experience}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Amazon} -- Software Development Engineer I & \hfill Mar 2025 -- Present \\[3.75pt]
+\textbf{Amazon, Hyderabad} -- Software Development Engineer I & \hfill Mar 2025 -- Present \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item \textbf{Architected multi-channel backend payment services} (Cards, UPI, Net Banking) using Java REST APIs and Elasticsearch, enabling real-time transaction processing and mitigating \textbf{\$10M+ in annual credit exposure}.
-        \item \textbf{Designed a fault-tolerant Wallet Refunds engine} leveraging stateful orchestration via \textbf{Amazon SWF} and distributed lock/idempotency patterns, eliminating duplicate disbursements and race conditions.
-        \item \textbf{Optimized an event-driven ingestion pipeline} on AWS Lambda by filtering redundant rule evaluations, reducing serverless invocations by \textbf{67\% (600K to 200K)} and cutting end-to-end processing latency by \textbf{65\%}.
-        \item \textbf{Remediated backend authorization vulnerabilities} by enforcing server-side key resolution and short-TTL pre-signed S3 URLs, preventing unauthorized access to sensitive financial records.
-        \item \textbf{Owned end-to-end service delivery} across 6+ backend microservices, driving system design, CI/CD pipelines, unit/integration testing (JUnit), and cross-region migration controls.
+        \item Launched \textbf{prepaid payments platform} (Cards, UPI, Net Banking) enabling real-time charge deduction at shipment creation and saving \textbf{$\sim$\$10M p.a.} eliminating credit risk on non premium shippers.
+        \item Authored the \textbf{HLD/LLD} for the \textbf{Wallet Refunds flow} and drove implementation end-to-end, using sync/async orchestration via \textbf{Amazon SWF} to ensure idempotency and eliminate race conditions across distributed services.
+        \item Cut \textbf{AWS Lambda invocations by 67\%} (600K to 200K) and reduced end-to-end system latency by \textbf{65\%} by eliminating redundant event processing in the package-transportation pipeline.
+        \item Remediated a \textbf{critical production security vulnerability} that exposed internal cloud-storage parameters in file-download URLs, preventing unauthorized access to sensitive financial documents.
+        \item Own feature delivery end-to-end across \textbf{6+ microservices} --- design, implementation, code review, and CI/CD deployment --- with unit/integration coverage via JUnit and Jest in a fast-paced Agile team.
     \end{itemize}
     \end{minipage}
 }
@@ -79,12 +77,12 @@ Backend \& Distributed Systems Engineer with 3+ years of experience architecting
 \vspace{6pt}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{iBind Systems} -- Software Development Engineer & \hfill Jul 2023 -- Oct 2024 \\[3.75pt]
+\textbf{iBind Systems, Bangalore} -- Software Development Engineer & \hfill Jul 2023 -- Oct 2024 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item \textbf{Engineered high-throughput RESTful microservices} in Python and PostgreSQL for automated corporate identity verification, document parsing, and e-signatures, cutting manual processing load by \textbf{30\%}.
-        \item \textbf{Led a 4-engineer pod} to deploy real-time ML inference pipelines using Python, OpenCV, and low-latency computer vision models, optimizing server-side execution to sub-300ms latency with \textbf{93\% accuracy}.
+        \item Developed \textbf{RESTful backend APIs} for a Corporate Identity Platform (CIP) for KYC cross-verification, document generation, and e-signing, \textbf{reducing manual intervention by 30\%}.
+        \item Led a team of 4 to build an \textbf{AI-powered video KYC solution} with liveness detection, improving accuracy from \textbf{80\% to 93\%} across desktop and mobile.
     \end{itemize}
     \end{minipage}
 }
@@ -93,11 +91,11 @@ Backend \& Distributed Systems Engineer with 3+ years of experience architecting
 \vspace{6pt}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{AI and Robotics Venture} -- Software Development Engineer & \hfill Jun 2022 -- Nov 2022 \\[3.75pt]
+\textbf{AI and Robotics Venture, Bangkok} -- Software Development Engineer & \hfill Jun 2022 -- Nov 2022 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item \textbf{Architected Redis caching layers} for Change Data Capture (CDC) streams using Debezium and Kafka, reducing primary database query volume by \textbf{40\%}, system latency by \textbf{30\%}, and cache miss rates by \textbf{53\%}.
+        \item Optimized \textbf{Redis cache} using Change Data Capture (CDC) with Debezium and Kafka, reducing DB query load by \textbf{40\%}, latency by \textbf{30\%}, and cache-miss rates by \textbf{53\%}.
     \end{itemize}
     \end{minipage}
 }
@@ -108,10 +106,10 @@ Backend \& Distributed Systems Engineer with 3+ years of experience architecting
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages} & Java, Python, C++, TypeScript, C, SQL \\
-\textbf{Backend \& Systems} & System Design, Microservices, REST APIs, Distributed Systems, Idempotency, Concurrency \\
-\textbf{Data \& Streaming} & Kafka, Redis, Elasticsearch, PostgreSQL, DynamoDB, AWS SQS, Debezium (CDC) \\
-\textbf{Cloud \& Infrastructure} & AWS (Lambda, S3, RDS, CloudWatch, SWF), Docker, Kubernetes, CI/CD, OOP, DSA \\
+\textbf{Languages \& Frameworks} & Java, JavaScript, TypeScript, Python, C++, React.js, Redux, Node.js \\
+\textbf{Backend \& Data} & OOP, Design Patterns, Data Structures \& Algorithms, System Design, Distributed Systems, Microservices, SQL, PostgreSQL, Redis, Apache Kafka, ElasticSearch \\
+\textbf{Cloud \& DevOps} & AWS (S3, RDS, CloudWatch, DynamoDB, SQS), Docker, Kubernetes, CI/CD \\
+\textbf{Gen AI} & LLMs, Prompt Engineering, AI Agents, RAG, AI-assisted development \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -132,7 +130,7 @@ Backend \& Distributed Systems Engineer with 3+ years of experience architecting
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Developed a custom 3D CNN with attention mechanisms using Python, TensorFlow, and CUDA on HPC infrastructure, improving IoU by \textbf{3.7\%} and precision by \textbf{5.1\%} while reducing model parameter size by \textbf{89\%}.
+        \item Designed a custom 3D CNN with attention mechanisms for cancer cell segmentation; improved IoU by \textbf{3.7\%}, Precision by \textbf{5.1\%}, and cut model size by \textbf{89\%} vs.\ CA-UNet using Python, TensorFlow, and CUDA on HPC clusters.
     \end{itemize}
     \end{minipage}
 }
