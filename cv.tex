@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,10.5pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES & SETUP
@@ -52,8 +52,7 @@ Hyderabad, IN \\
 % SUMMARY
 %----------------------------------------------------------------------------------------
 \section{Summary}
-Backend engineer building distributed systems at production scale. At Amazon, built a prepaid payments platform end to end that eliminated \textbf{$\sim$\$10M/year} of credit risk, and architected its self-service refund flow with idempotent payouts that prevent double-payment. 3 years in Java, Spring Boot and AWS; previously led a team of 4 to ship an AI-powered video KYC product.
-
+Backend engineer building distributed systems at production scale. At Amazon, owns projects end to end across 6+ services, working with finance, tax, accounting and product teams. Built a prepaid payments platform that eliminated {\$10M+/year} of credit risk. 3 years of backend experience using Java, Spring Boot, Node.js and AWS; previously led a team of 4 to ship an AI-powered video KYC product.
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -64,11 +63,11 @@ Backend engineer building distributed systems at production scale. At Amazon, bu
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Eliminated \textbf{$\sim$\$10M/year} of unpaid-shipment credit risk by building a \textbf{prepaid wallet payments} system end to end (\textbf{Java backend services, REST APIs, React/Redux frontend}) and integrating a payment aggregator (Cards, UPI, Net Banking) to charge each shipment in real time at booking.
-        \item Reduced refund processing time from \textbf{$\sim$3 days to $\sim$30 minutes} by replacing a manual, operator-run process with a self-service withdrawal flow: wrote the high-level and low-level design (HLD/LLD) and built it full-stack on \textbf{Java/Spring Boot} with \textbf{React micro-frontend}.
-        \item Made refund payouts \textbf{safe from double-payment} and forged requests by designing \textbf{disbursement APIs} that use \textbf{sync/async} workflow orchestration (\textbf{Amazon SWF}) to prevent \textbf{race conditions} across distributed services, UUID \textbf{idempotency} keys reused across retries, \textbf{server-side authorization} and \textbf{CSRF protection}.
-        \item Automated account-statement generation for \textbf{5000+ businesses} by building an \textbf{event-driven} PDF pipeline triggered by invoice-creation events, with Velocity templates, \textbf{Elasticsearch} queries and \textbf{unit/integration} tests (\textbf{JUnit, Mockito}).
-        \item Slashed \textbf{AWS Lambda invocations 67\%} (600K to 200K) and \textbf{end-to-end latency 65\%} by optimizing an event-driven \textbf{serverless pipeline} to evaluate rules only on the shipment events that produced output.
+    \item Prevented \textbf{\$10M+/year} of unpaid-shipment credit risk by designing and launching an end-to-end \textbf{prepaid wallet platform} with Java REST services, React/Redux and real-time card, UPI and net-banking payments.
+\item Reduced refund time from \textbf{$\sim$3 days to $\sim$30 minutes} by replacing a manual workflow with self-service withdrawals; authored the \textbf{HLD/LLD}, aligned it with finance and accounting, and built it using \textbf{Java/Spring Boot} and React.
+\item Secured refund payouts against \textbf{double-payment} and race conditions by designing disbursement APIs with \textbf{Amazon~SWF} orchestration and UUID \textbf{idempotency} keys, plus server-side authorization and CSRF protection.
+\item Slashed \textbf{AWS Lambda invocations 67\%} (600K to 200K per day) and \textbf{end-to-end latency 65\%} by optimizing an event-driven \textbf{serverless pipeline} to evaluate rules only on the shipment events that produced output.
+\item Automated account-statement generation for \textbf{5000+ businesses} by building a PDF pipeline triggered by invoice-creation events, using Velocity templates, \textbf{Elasticsearch} queries and unit/integration tests (JUnit, Mockito).
     \end{itemize}
     \end{minipage}
 }
@@ -81,8 +80,9 @@ Backend engineer building distributed systems at production scale. At Amazon, bu
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Trimmed \textbf{manual KYC review work 30\%} by building \textbf{Node.js/TypeScript REST APIs} for a corporate identity-verification platform that automatically cross-check company documents, generate agreements and send them for e-signature.
+        \item Trimmed \textbf{manual KYC review work 30\%} by building \textbf{Node.js/TypeScript REST APIs} that automatically cross-check company documents, generate agreements and send them for e-signature.
         \item Raised video identity-verification accuracy from \textbf{80\% to 93\%} by leading a team of 4 to build an \textbf{AI-powered video KYC system with liveness detection} (blink, head-movement and smile checks) for desktop and mobile.
+        \item Decoupled \textbf{document processing}, email/SMS OTP delivery and \textbf{verifiable-credential issuance on the Polygon blockchain} from user-facing APIs with \textbf{RabbitMQ} async workers, so requests no longer waited on slow tasks.
     \end{itemize}
     \end{minipage}
 }
@@ -95,8 +95,8 @@ Backend engineer building distributed systems at production scale. At Amazon, bu
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Lowered \textbf{database query load 40\%, latency 30\% and cache misses 53\%} by keeping a \textbf{Redis} cache in sync with \textbf{PostgreSQL} through \textbf{change data capture} (\textbf{Debezium + Apache Kafka}), so cached data updated as soon as the source changed.
-    \end{itemize}
+        \item Lowered \textbf{database query load 40\%, latency 30\% and cache misses 53\%} by syncing a \textbf{Redis} cache with \textbf{PostgreSQL} in real time through \textbf{change data capture} (\textbf{Debezium + Apache Kafka}).
+        \end{itemize}
     \end{minipage}
 }
 \end{tabularx}
@@ -104,11 +104,11 @@ Backend engineer building distributed systems at production scale. At Amazon, bu
 \vspace{6pt}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Culinda Inc., Hyderabad} -- Machine Learning Intern & \hfill Aug 2021 -- Nov 2021 \\[3.75pt]
+\textbf{Culinda, Hyderabad} -- Machine Learning Intern & \hfill Aug 2021 -- Nov 2021 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item Processed \textbf{terabytes of data per day} for machine-learning workloads by building a scalable \textbf{Python} ingestion pipeline using \textbf{Apache Kafka} for ingestion, \textbf{Apache Cassandra} for storage and \textbf{Dask} for parallel processing.
+        \item Processed \textbf{terabytes of data per day} for machine-learning workloads by building a scalable \textbf{Python} ingestion pipeline using \textbf{Apache Kafka} for streaming, \textbf{Apache Cassandra} for storage and \textbf{Dask} for parallel processing.
     \end{itemize}
     \end{minipage}
 }
